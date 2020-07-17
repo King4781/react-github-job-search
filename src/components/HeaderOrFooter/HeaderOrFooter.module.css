@@ -1,0 +1,22 @@
+.spanOne {
+    color: var(--clr-dark);
+}
+
+.spanTwo {
+    font-weight: 100 !important;
+    color: var(--clr-dark);
+}
+
+.header {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: var(--clr-secondary);
+    margin: 2rem auto;
+}

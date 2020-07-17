@@ -1,0 +1,30 @@
+.layout {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    .layout {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .flexContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main {
+        width: 70%;
+    }
+
+    .sideBar {
+        width: 30%;
+    }
+}

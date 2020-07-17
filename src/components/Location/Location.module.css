@@ -1,0 +1,60 @@
+.location {
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checkbox {
+    margin-right: 0.5rem;
+}
+
+.checkboxLabel {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 21px;
+}
+
+.flexDiv {
+    display: flex;
+    background-color: #fff;
+    max-width: 18rem;
+    border-radius: 4px;
+}
+
+.location h4 {
+    color: var(--clr-secondary);
+    text-transform: uppercase;
+}
+
+.img {
+    margin-left: .5rem;
+}
+
+.text {
+    border-color: transparent;
+    outline: transparent;
+    width: 100%;
+    background-color: #fff;
+    min-height: 4rem;
+    border-radius: 2px;
+    margin-left: 1rem;
+}
+
+.radio {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio div {
+    margin-top: .5rem;
+    font-weight: 700;
+}
+
+.radio label {
+    margin-left: .5rem;
+}
