@@ -20,4 +20,4 @@
 
 ![Screenshot 1](src/images/sc.png?raw=true)
 
-![Screenshot 2](src/images/sc1.png?raw=true)
+![Screenshot 2](src/images/sc2.png?raw=true)
