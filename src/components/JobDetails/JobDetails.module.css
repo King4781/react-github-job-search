@@ -1,0 +1,72 @@
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+}
+
+.type {
+    margin: 1rem 0;
+    border: 1px solid var(--clr-font-color);
+    border-radius: 3px;
+    width: 6rem;
+    padding: .5rem 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: .85rem;
+}
+
+.top small {
+    display: flex;
+    color: var(--clr-secondary);
+    align-items: center;
+    font-size: 1rem;
+}
+
+.top small img {
+    margin-right: .5rem;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.companyLogo {
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 4px;
+    border: 2p solid #fff;
+    margin-right: 2rem;
+}
+
+.company {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.company p a {
+    text-decoration: underline;
+}
+
+.company small {
+    display: flex;
+    color: var(--clr-secondary);
+    align-items: center;
+}
+
+.company small img {
+    margin-right: 1rem;
+}
+
+.jobDescription {
+    line-height: 1.6rem;
+    font-size: 1.3;
+}

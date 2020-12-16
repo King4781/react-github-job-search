@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+
+import Pagination from "../Pagination/Pagination";
 
 import { GlobalStateContext } from "../../context/GlobalContextProvider";
-import { formatDays } from "../../utils/helperFunctions";
+import { formatDays, paginate, truncate } from "../../utils/helperFunctions";
 
 import styles from "./SearchResults.module.css";
 
@@ -28,12 +31,12 @@ const Card = ({ company, title, logo, type, location, daysPassed }) => {
       </div>
       <div className={styles.footer}>
         <div>
-          <img src={clockImg} alt="earth icon" />
+          <img src={clockImg} alt="clock icon" />
           <small>{daysPassed}</small>
         </div>
         <div>
           <img src={earthImg} alt="earth icon" />
-          <small>{location}</small>
+          <small>{truncate(location, 16)}</small>
         </div>
       </div>
     </div>
@@ -41,21 +44,36 @@ const Card = ({ company, title, logo, type, location, daysPassed }) => {
 };
 
 const SearchResults = () => {
-  const { jobs } = useContext(GlobalStateContext);
-  return (
-    <div>
-      {jobs.map((job) => (
-        <Card
-          key={job.id}
-          company={job.company}
-          title={job.title}
-          logo={job.company_logo}
-          type={job.type}
-          location={job.location}
-          daysPassed={job.created_at}
-        />
+  const { jobs, arrayPageCount, loading, jobsPerPage } = useContext(
+    GlobalStateContext
+  );
+
+  let noJobsFound = jobs.length === 0;
+  let paginatedArray = paginate(jobs, jobsPerPage, arrayPageCount);
+
+  let results = (
+    <>
+      {paginatedArray.map((job) => (
+        <Link key={job.id} to={`/details/${job.id}`}>
+          <Card
+            company={job.company}
+            title={job.title}
+            logo={job.company_logo}
+            type={job.type}
+            location={job.location}
+            daysPassed={job.created_at}
+          />
+        </Link>
       ))}
-    </div>
+      <Pagination />
+    </>
+  );
+
+  if (noJobsFound) {
+    results = <h1 className={styles.noJobsFound}>No jobs Found!</h1>;
+  }
+  return (
+    <div>{loading ? <div className={styles.loading}></div> : results}</div>
   );
 };
 

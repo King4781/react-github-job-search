@@ -58,3 +58,8 @@ fieldset {
 .radio label {
     margin-left: .5rem;
 }
+
+.searchTerm {
+    text-transform: uppercase;
+    margin: 1rem 0;
+}

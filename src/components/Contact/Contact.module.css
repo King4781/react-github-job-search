@@ -1,0 +1,39 @@
+.contact {
+    max-width: 80%;
+}
+
+.back {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--clr-accent);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.back img {
+    height: 2.5rem;
+    width: 4rem;
+}
+
+.howToApply {
+    color: var(--clr-secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 21px;
+    margin: 2rem auto 1rem auto;
+}
+
+.email {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    max-width: 20rem;
+    word-break: break-all;
+}
+
+.email p a {
+    color: var(--clr-accent);
+}

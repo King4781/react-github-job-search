@@ -11,7 +11,7 @@ import earthImg from "../../images/earth.svg";
 
 const FullTime = () => {
   const dispatch = useContext(GlobalDispatchContext);
-  const { isFulltime } = useContext(GlobalStateContext);
+  const { isFulltime, description } = useContext(GlobalStateContext);
   return (
     <>
       <input
@@ -27,6 +27,9 @@ const FullTime = () => {
       <label className={styles.checkboxLabel} htmlFor="fulltime">
         Full Time
       </label>
+      <p className={styles.searchTerm}>
+        {description ? "Search term : " + description : ""}
+      </p>
     </>
   );
 };

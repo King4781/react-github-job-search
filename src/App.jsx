@@ -1,9 +1,15 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
 
 //components
-import HomePage from "./pages/HomePage/HomePage";
+import SearchPage from "./pages/SearchPage/SearchPage";
+import JobDetailsPage from "./pages/JobDetailsPage/JobDetailsPage";
 
-const App = () => <HomePage className="App" />;
+const App = () => (
+  <BrowserRouter>
+    <Route path="/details/:id" exact component={JobDetailsPage} />
+    <Route path="/" exact component={SearchPage} />
+  </BrowserRouter>
+);
 
 export default App;

@@ -6,7 +6,7 @@ import Search from "../../components/Search/Search";
 import Location from "../../components/Location/Location";
 import SearchResults from "../../components/SearchResults/SearchResults";
 
-const HomePage = () => {
+const SearchPage = () => {
   return (
     <Layout main={<SearchResults />} sideBar={<Location />}>
       <Search />
@@ -14,4 +14,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default SearchPage;

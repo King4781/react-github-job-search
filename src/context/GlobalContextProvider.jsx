@@ -4,13 +4,15 @@ export const GlobalStateContext = React.createContext();
 export const GlobalDispatchContext = React.createContext();
 
 const initialState = {
-  loading: false,
+  loading: true,
   jobs: [],
   location: "new york",
   oldLocation: "",
   userEnterLocation: "",
   description: "",
   isFulltime: false,
+  arrayPageCount: 1,
+  jobsPerPage: 5,
   error: "",
 };
 
@@ -27,6 +29,18 @@ function reducer(state, action) {
         ...state,
         jobs: [...state.jobs],
         isFulltime: !state.isFulltime,
+      };
+    case "INCREMENT_ARR_COUNT":
+      return {
+        ...state,
+        jobs: [...state.jobs],
+        arrayPageCount: state.arrayPageCount + 1,
+      };
+    case "DECREMENT_ARR_COUNT":
+      return {
+        ...state,
+        jobs: [...state.jobs],
+        arrayPageCount: state.arrayPageCount - 1,
       };
     case "SET_LOCATION":
       return {
@@ -69,6 +83,8 @@ function reducer(state, action) {
         ...state,
         jobs: action.jobs,
         loading: false,
+        noJobsFound: action.noJobsFound,
+        arrayPageCount: 1,
       };
     case "ERROR":
       return {

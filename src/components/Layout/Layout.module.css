@@ -1,6 +1,7 @@
 .layout {
     width: 95%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .flexContainer {
@@ -22,9 +23,11 @@
 
     .main {
         width: 70%;
+        margin-left: 1rem;
     }
 
     .sideBar {
         width: 30%;
+        margin-right: 1rem;
     }
 }

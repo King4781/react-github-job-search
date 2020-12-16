@@ -31,7 +31,7 @@
 @media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 2rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -52,6 +52,11 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-font-color);
 }
 
 img {

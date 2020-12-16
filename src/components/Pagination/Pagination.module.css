@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5rem 0;
+}
+
+
+.button {
+    min-height: 3rem;
+    width: 35%;
+    border-color: transparent;
+    background-color: var(--clr-accent);
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        justify-content: flex-end;
+    }
+
+    .button {
+        width: 20%;
+        margin-right: 2rem;
+    }
+}
