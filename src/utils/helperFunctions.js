@@ -15,7 +15,6 @@ export function fetchJobs(url, dispatch) {
             return data.json();
         })
         .then((response) => {
-            console.log(response);
             dispatch({
                 type: "SET_JOBS",
                 jobs: response,

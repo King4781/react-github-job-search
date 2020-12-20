@@ -15,9 +15,9 @@ const Search = () => {
   const {
     location,
     isFulltime,
-    userEnterLocation,
+    userEnterLocation, 
     oldLocation,
-    description,
+    description
   } = useContext(GlobalStateContext);
   const dispatch = useContext(GlobalDispatchContext);
 
